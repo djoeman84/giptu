@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "browserify": "^7.0.3",
-    "cssify": "^0.6.0"
+    "cssify": "^0.6.0",
+    "firebase-tools": "^1.1.4"
   },
   "devDependencies": {},
   "scripts": {
