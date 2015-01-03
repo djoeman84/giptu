@@ -1,10 +1,27 @@
 <md-toolbar layout="column" class="md-whiteframe-z2">
 	<div class="md-toolbar-tools" layout="column" flex>
-		<div layout="row" flex>
-			<div>Giptu</div>
-		</div>
+		<span flex>Giptu</span>
+		<div flex></div>
+		<md-button class="md-primary md-fab" md-theme="teal">
+      <div class="fa fa-lock"></div>
+    </md-button>
 	</div>
 </md-toolbar>
-<md-content md-scroll-y layout-fill flex class="layout-content grey-back-color" id="backdrop">
-	<md-card>hi</md-card>
-</md-content>
+<div md-scroll-y layout-fill flex class="layout-content grey-back-color" id="backdrop">
+	<md-card class="card">
+		<md-list>
+			<md-item ng-repeat="item in ['a', 'b']">
+				<md-item-content>
+					<div class="md-tile-content">
+						<h3>{{item}}</h3>
+            <h4>{{item}}</h4>
+            <p>
+              {{item}}
+            </p>
+					</div>
+				</md-item-content>
+				<md-divider md-inset ng-if="!$last"></md-divider>
+			</md-item>
+		</md-list>
+	</md-card>
+</div>

@@ -2,3 +2,4 @@
 /src/bower_components
 /node_modules/
 public/bundle.js
+public/no_browserify
