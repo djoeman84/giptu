@@ -9,22 +9,28 @@ require('./bower_components/angular-material/themes/blue-theme.css');
 require('./bower_components/angular-material/themes/teal-theme.css');
 require('./bower_components/angular-material/themes/red-theme.css');
 require('./bower_components/angular-ui-router/release/angular-ui-router.min.js');
+require('./bower_components/firebase/firebase.js');
 
 require('./js/Controllers/__init__.js');
+require('./js/Factories/__init__.js');
 require('./js/Services/__init__.js');
 require('./css/__init__.js');
 
 angular.module('imports', [])
 	.value('sjcl', require('./bower_components/sjcl/sjcl.js'))
 	.value('JSEncrypt', require('./bower_components/jsencrypt/bin/jsencrypt.min.js'))
+	.value('Firebase', Firebase)
 	.value('_', require('./bower_components/underscore/underscore-min.js'));
+
+angular.module('globals', [])
+	.value('firebaseRefUrl', 'https://giptu.firebaseio.com/');
 
 angular.module('giptuApp', [
 		'ngMaterial', 'ui.router',
 
-		'imports',
+		'imports', 'globals',
 
-		'controllers', 'services'
+		'controllers', 'factories', 'services'
 	])
 	.config([
 			'$stateProvider', '$urlRouterProvider',

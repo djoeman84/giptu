@@ -1,4 +1,4 @@
-function BaseController($scope, _, bucket) {
+function BaseController($scope, _, Bucket) {
 	$scope.ui = {
     inputFocused: false,
     bucketLookup: ''
@@ -14,7 +14,7 @@ function BaseController($scope, _, bucket) {
   );
 }
 
-BaseController.$inject = ['$scope', '_', 'bucket'];
+BaseController.$inject = ['$scope', '_', 'Bucket'];
 
 
 angular.module('controllers')
