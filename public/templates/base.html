@@ -1,13 +1,34 @@
 <md-toolbar layout="column" class="md-whiteframe-z2">
 	<div class="md-toolbar-tools" layout="column" flex>
 		<span flex>Giptu</span>
-		<div flex></div>
-		<md-button class="md-primary md-fab" md-theme="teal">
-      <div class="fa fa-lock"></div>
-    </md-button>
 	</div>
 </md-toolbar>
+<md-button class="md-primary md-fab md-fab-bottom-right" md-theme="red">
+  <div class="fa fa-plus"></div>
+</md-button>
 <div md-scroll-y layout-fill flex class="layout-content grey-back-color" id="backdrop">
+	<md-card class="card">
+    <div
+      ng-class="{
+        'bucket-lookup-box': true,
+        'input-focused': ui.inputFocused
+      }"
+      layout="row" layout-align="left center">
+      <div layout="column" layout-align="center start">
+        <md-button>
+          <md-tooltip>
+            Photos
+          </md-tooltip>
+          <div class="fa fa-plus fa-fw"></div>
+        </md-button>
+      </div>
+      <input
+        flex
+        ng-model="ui.bucketLookup"
+        ng-focus="ui.inputFocused = true" ng-blur="ui.inputFocused = false"
+        placeholder="Open Bucket"/>
+    </div>
+	</md-card>
 	<md-card class="card">
 		<md-list>
 			<md-item ng-repeat="item in ['a', 'b']">

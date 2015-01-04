@@ -10,3 +10,23 @@
 .card {
 	background-color: white;
 }
+
+.bucket-lookup-box {
+  padding: 8px;
+  background-color: rgba(0,0,0,0.01);
+  border-radius: 5px;
+}
+
+.bucket-lookup-box:hover {
+  background-color: rgba(0,0,0,0.03);
+}
+
+.bucket-lookup-box.input-focused {
+ background-color: rgba(0,0,0,0.05); 
+}
+
+.bucket-lookup-box > input {
+  border: 0;
+  background-color: transparent;
+  padding-left: 10px;
+}
